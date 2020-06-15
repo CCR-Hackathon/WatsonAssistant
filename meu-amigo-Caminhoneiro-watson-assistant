@@ -1,0 +1,948 @@
+{
+  "intents": [
+    {
+      "intent": "avaliação",
+      "examples": [
+        {
+          "text": "quero fazer uma avaliação"
+        },
+        {
+          "text": "preciso fazer uma avaliação"
+        },
+        {
+          "text": "gostaria de avaliar uma empresa."
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "saudação",
+      "examples": [
+        {
+          "text": "Bom dia Meu amigo caminhoneiro"
+        },
+        {
+          "text": "bom dia"
+        },
+        {
+          "text": "Fala ai Meu amigo caminhoneiro tudo bem?"
+        },
+        {
+          "text": "oi"
+        },
+        {
+          "text": "Olá Meu amigo caminhoneiro"
+        },
+        {
+          "text": "Boa tarde meu amigo caminhoneiro"
+        },
+        {
+          "text": "Boa tarde"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "Socorro",
+      "examples": [
+        {
+          "text": "meu caminhão quebrou"
+        },
+        {
+          "text": "socorro"
+        },
+        {
+          "text": "estou com um problema"
+        },
+        {
+          "text": "me ajuda"
+        },
+        {
+          "text": "Meu amigo caminhoneiro socorro"
+        },
+        {
+          "text": "puta que pariu me ajuda."
+        },
+        {
+          "text": "sofri um acidente"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "TracarRota",
+      "examples": [
+        {
+          "text": "Gostaria de traçar minha rota"
+        },
+        {
+          "text": "quero traçar minha rota"
+        },
+        {
+          "text": "quero traçar uma rota para são paulo"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "notificação",
+      "examples": [
+        {
+          "text": "avisa ai que tem um problema na pista"
+        },
+        {
+          "text": "Meu amigo caminhoneiro, quero relatar um problema"
+        },
+        {
+          "text": "Meu amigo caminhoneiro, quero notificar um problema"
+        },
+        {
+          "text": "quero avisar um problema."
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "emergencia",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "assalto",
+          "synonyms": [
+            "roubo",
+            "assaltado",
+            "roubado",
+            "sequestro",
+            "sequestrado"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Acidente",
+          "synonyms": [
+            "batida",
+            "capotagem",
+            "capotamento",
+            "explosão",
+            "incendio"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Mecânico",
+          "synonyms": [
+            "caminhão quebrou",
+            "fundiu o motor",
+            "estourou o pneu",
+            "furou o pneu",
+            "quebrou o cambio"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Saude",
+          "synonyms": [
+            "estou passando mal",
+            "estou com dor",
+            "me machuquei"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "saudação",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "ola",
+          "synonyms": [
+            "oi",
+            "e ai",
+            "falai"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "boa noite",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "boa tarde",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "bom dia",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "problemas",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "iluminação",
+          "synonyms": [
+            "tudo escuro",
+            "não tem luz"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "pista",
+          "synonyms": [
+            "buraco",
+            "pista molhada",
+            "animal na pista",
+            "objeto na pista",
+            "coisa na estrada"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "sinalização",
+          "synonyms": [
+            "sem placa",
+            "sem faixa"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "transito",
+          "synonyms": [
+            "esta tudo parado",
+            "engarrafamento"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "lugares",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "cidades",
+          "synonyms": [
+            "são paulo capital",
+            "santos",
+            "campinas",
+            "sorocaba",
+            "ourinhos",
+            "salvador"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "estados",
+          "synonyms": [
+            "são paulo",
+            "minas gerais",
+            "santa catarina",
+            "bahia",
+            "rio grande do sul",
+            "parana",
+            "rio de janeiro",
+            "espirito santo"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-time",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "avaliação",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Transportadora São José",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "decisão",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "não",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "sim",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Vou passar essa localização e avisar que a sinalização das placas está com problemas aqui."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1592154107405",
+      "conditions": "@problemas:sinalização",
+      "dialog_node": "response_2_1592154843138",
+      "previous_sibling": "response_6_1592154841474"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Vou enviar esse problema a consessionária."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1592154107405",
+      "conditions": "@problemas:pista",
+      "dialog_node": "response_9_1592154875343",
+      "previous_sibling": "response_2_1592154844778"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Eita, isso é um problema, vou checar para você  o que ouve mais a frente."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1592154107405",
+      "conditions": "@problemas:transito",
+      "dialog_node": "response_2_1592154844778",
+      "previous_sibling": "response_2_1592154843138"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Opá, qual notificação você gostaria de fazer?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1592154107405",
+      "dialog_node": "response_7_1592154836891",
+      "previous_sibling": "response_9_1592154875343"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "vou passar seu problema para a Concessionaria junto a sua localização para que eles possam mandar um suporte para corrigir essa falha de energia."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1592154107405",
+      "conditions": "@problemas:iluminação",
+      "dialog_node": "response_6_1592154841474"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "@saudação meu amigo como posso te ajudar hoje "
+              },
+              {
+                "text": "@saudação tudo bem com você, como posso te ajudar"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1592130683780",
+      "conditions": "@saudação",
+      "dialog_node": "response_8_1592130712032"
+    },
+    {
+      "type": "standard",
+      "parent": "node_8_1592160748171",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@decisão",
+      "dialog_node": "node_1_1592159676159"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Otimo, otimizando a rota. vamos chegar @lugares na @sys-date as @sys-time, posso habilitar sua rota no wase "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_7_1592131253264",
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "@sys-date || @sys-time",
+      "dialog_node": "node_7_1592131406085"
+    },
+    {
+      "type": "standard",
+      "parent": "node_7_1592131406085",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@decisão",
+      "dialog_node": "node_6_1592131852450"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Por favor, dê uma nota de 0 a 5 para o critério: Assistência e acompanhamento em caso de imprevistos."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1592160582418",
+      "conditions": "@sys-number",
+      "dialog_node": "node_3_1592160706780"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Tudo bem então, Adcionei algumas paradas no seu trajeto para descanso de acordo com suas preferencias irei te notificando por aqui. A qualquer momento que quiser é só me pedir que habilito a rota para você no wase ouno Google maps. Tenha uma boa viagem"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1592131852450",
+      "conditions": "@decisão:não",
+      "dialog_node": "response_2_1592131942923",
+      "previous_sibling": "response_6_1592131898331"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Otimo, Adcionei algumas paradas no seu trajeto para descanso de acordo com suas preferencias.  Abrindo Wase Tenha uma boa viagem"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1592131852450",
+      "conditions": "@decisão:sim",
+      "dialog_node": "response_6_1592131898331"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Okey, fique calmo, acione o pisca alerta, e tente encostar no acostamento. já peguei suas infoemações, estou enviando para a concessionaria. eles vão enviar ajuda."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1592078021292",
+      "conditions": "@emergencia:Saude",
+      "dialog_node": "response_3_1592079711941",
+      "previous_sibling": "response_10_1592079372527"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Okey, estou ligando para os mecânicos da concessiona. Ele já vai nos ajudar"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1592078021292",
+      "conditions": "@emergencia:Mecânico",
+      "dialog_node": "response_10_1592079372527",
+      "previous_sibling": "response_1_1592079359390"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "qual o problema "
+              },
+              {
+                "text": "o que aconteceu ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1592078021292",
+      "dialog_node": "response_3_1592079312909",
+      "previous_sibling": "response_3_1592079711941"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "okey, fique calmo, já enviei sua localização para a concessionaria, eles vão enviar alguem aqui para nos ajudar. Fica tranquilo."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1592078021292",
+      "conditions": "@emergencia:Acidente",
+      "dialog_node": "response_1_1592079359390",
+      "previous_sibling": "response_7_1592079326269"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "okey, fique calmo, não reaja, já estou enviando a sua localização e seus dados para a concessionária e vamos acionar a policia."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1592078021292",
+      "conditions": "@emergencia:assalto",
+      "dialog_node": "response_7_1592079326269"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_4_1592130945466",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1592130945488",
+      "previous_sibling": "handler_9_1592130945488"
+    },
+    {
+      "type": "event_handler",
+      "parent": "slot_4_1592130945466",
+      "event_name": "input",
+      "dialog_node": "handler_9_1592130945488"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Por favor, fale o seu comentário"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1592159676159",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_9_1592159904417"
+      },
+      "conditions": "@decisão:sim",
+      "dialog_node": "response_9_1592159731026",
+      "previous_sibling": "node_9_1592159904417"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Perfeito, Avaliação concluida. Vamos enviar essas informações para nosso banco de dados e assim ajudar todos os caminhoneiros que precisarem. Muito obrigado"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1592159676159",
+      "conditions": "@decisão:não",
+      "dialog_node": "response_6_1592159777450",
+      "previous_sibling": "response_9_1592159731026"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Perfeito, Avaliação concluida. Muito obrigado por seu comentário. Vamos enviar essas informações para nosso banco de dados e assim ajudar todos os caminhoneiros que precisarem. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1592159676159",
+      "conditions": "@avaliação:empresa",
+      "dialog_node": "node_9_1592159904417"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": " Entendi. Por favor, dê uma nota de 0 a 5 para o critério: Satisfação geral com a empresa:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1592156991402",
+      "conditions": "@avaliação",
+      "dialog_node": "node_6_1592160569387"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": " Avaliação terminada. Você gostaria de deixar um comentário com críticas ou sugestões?\n"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1592160706780",
+      "conditions": "@sys-number",
+      "dialog_node": "node_8_1592160748171"
+    },
+    {
+      "type": "slot",
+      "parent": "node_2_1592130918998",
+      "dialog_node": "slot_4_1592130945466",
+      "previous_sibling": "node_7_1592131253264"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ja estou cauculando a rota aqui. quando você deseja chegar "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1592130918998",
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "@lugares:estados || @lugares:cidades",
+      "dialog_node": "node_7_1592131253264"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": " Por favor, dê uma nota de 0 a 5 para o critério: Remuneração."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_6_1592160569387",
+      "conditions": "@sys-number",
+      "dialog_node": "node_5_1592160582418"
+    },
+    {
+      "type": "standard",
+      "title": "Saudação",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#saudação",
+      "dialog_node": "node_6_1592130683780",
+      "previous_sibling": "node_2_1592154107405"
+    },
+    {
+      "type": "standard",
+      "title": "rota",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Perfeito, para onde vemos"
+              },
+              {
+                "text": "Otimo, para onde vamos"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#TracarRota",
+      "dialog_node": "node_2_1592130918998",
+      "previous_sibling": "node_6_1592130683780"
+    },
+    {
+      "type": "standard",
+      "title": "Em outros casos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Eu não entendi. Você pode tentar reformular a frase."
+              },
+              {
+                "text": "Você pode reformular sua afirmação? Eu não estou entendendo."
+              },
+              {
+                "text": "Eu não entendi o sentido."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Em outros casos",
+      "previous_sibling": "node_2_1592078021292",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#notificação",
+      "dialog_node": "node_2_1592154107405",
+      "previous_sibling": "node_10_1592156991402"
+    },
+    {
+      "type": "standard",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#Socorro",
+      "dialog_node": "node_2_1592078021292",
+      "previous_sibling": "node_2_1592130918998"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Qual empresa gostaria de avaliar?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#avaliação",
+      "dialog_node": "node_10_1592156991402",
+      "previous_sibling": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "Bem-vindo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá. Como posso te ajudar?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Bem-vindo"
+    }
+  ],
+  "counterexamples": [
+    {
+      "text": "para são paulo"
+    },
+    {
+      "text": "Transportadora São José"
+    }
+  ],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": "Você quis dizer:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Nenhuma das anteriores"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    }
+  },
+  "learning_opt_out": false,
+  "name": "Bino",
+  "language": "pt-br",
+  "description": ""
+}
